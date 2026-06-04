@@ -1,0 +1,124 @@
+Essential Details
+Primary Goal: What is the main purpose of the site (job applications, portfolio, blog, personal brand, other)?
+    - Portfolio and Job Applications
+Target Audience: Who do you want to reach (recruiters, classmates, employers, researchers)?
+    - Recruiters/Employers/Professionals (future proofed for when years into career)
+Top Roles: Which roles are you aiming for (software engineer, data scientist, security analyst, quant intern)?
+    - SWE, Quant Analyst, AI/ML Engineer, Program Manager (MBA - will transition to management in the future)
+Tone & Personality: Should the site feel formal, friendly, playful, minimalist, or technical?
+    - Technical
+One‑line Bio: How would you describe yourself in one sentence?
+    - I'm an ambitious Stevens student blending quantitative finance, software engineering, and leadership with a strong bias toward building, analyzing, and getting things done.
+
+Content & Portfolio
+Core Sections: Which pages do you want (Home, About, Projects, Resume, Blog, Contact)?
+    - Home, About, Projects, Resume, Now (current focus), Contact
+Projects to Feature: Which projects should be included and which repo/URL for each?
+    - DueForge: https://github.com/PranavGoyal01/DueForge
+    - AI-Cars-in-Real-Cities: https://github.com/PranavGoyal01/AI-Cars-in-Real-Cities
+    - ETF-Arbitrage: https://github.com/PranavGoyal01/ETF-Arbitrage
+    - Lost-n-Found: https://github.com/PranavGoyal01/Lost-n-Found
+    - The-Mona-Lisa-CPU: https://github.com/PranavGoyal01/The-Mona-Lisa-CPU
+    - Full-Stack-Encyption-Service: https://github.com/PranavGoyal01/Full-Stack-Encryption-Service
+Project Details: For each project, what do you want shown (problem, approach, tech, link, demo, repo, screenshots)?
+    - Problem, approach, tech, link
+Resume Availability: Do you want a downloadable resume PDF and an online interactive resume?
+    - Yes
+Education & Coursework: Which programs, expected graduation, and relevant courses to highlight?
+    - Bachelor of Science in Computer Science (GPA: 3.7/4.0)
+    - Expected Graduation: May 2028
+    - Minors: Quant Finance & Cybersecurity
+    - Honors: Pinnacle Scholar, 3x Dean’s List
+    - Graduate Certifications: Machine Learning, Enterprise and Cloud Computing, ML in Finance, FinTech, Cybersecurity
+Skills & Tools: List key technical skills and proficiency levels (languages, frameworks, cloud, security tools, math/quant tools).
+    - Programming Languages: Python, Java, JavaScript, SQL
+    - Frameworks & Tools: AWS, Vercel, Supabase, GitHub Actions CI/CD
+    - Certifications: AWS Certified Cloud Practitioner, AWS Certified AI Practitioner, AI Agents Fundamentals (Hugging Face)
+Publications / Research: Any papers, posters, or notable coursework to showcase?
+    - Currently researching, nothing published yet
+Awards & Experience: Internships, competitions, scholarships to include?
+    - Can we import from LinkedIn?
+Blog: Do you want a blog? If yes, topics, cadence, and examples of first posts?
+    - Not for now
+Media Assets: Do you have a headshot, logo, or project images ready?
+    - I have a headshot, no logo and no project images.
+
+Design & UX
+Style Preferences: Preferred colors, fonts, layout (single page vs multi‑page), and examples of sites you like?
+    - Like sharp colors like red and black (not sure if they will necessarily fit for a website), no specific font, multi-page preferred
+Branding: Any personal logo, color palette, or monogram preferences?
+    - No
+Accessibility: Any accessibility requirements (high contrast, screen reader friendly)?
+    - One of the lowest priority, but yes incluse high contrast and screen reader friendly features
+Responsiveness: Mobile-first or desktop-first priorities?
+    - Desktop-first
+Animations & Interactivity: Want micro-interactions, scroll animations, or keep it static/simple?
+    - Yes, let's add it
+Dark Mode: Want a light/dark theme toggle?
+    - Yes
+
+Technical & Hosting
+Tech Stack Preference: Static HTML/CSS, Hugo/Jekyll, React/Next.js, Svelte, or no preference?
+    - No preference
+Code Hosting: Use GitHub (already), GitHub Pages, Netlify, Vercel, or another host?
+    - GitHub, Vercel
+Custom Domain: Do you have a domain or want help choosing one?
+    - I do own one already on porkbun, pgoyal.us
+    - I plan to eventually transfer it to cloudflare, but that shouldn't be an issue. Make a note in a notes.md file for me to review at my leisure and make communication easier.
+CI/CD: Do you want automated deploys from commits?
+    - Yes
+Backend Needs: Any server features needed (contact form backend, comments, authentication)?
+    - You analyze and decide
+Third‑party Integrations: GitHub, LinkedIn, Google Scholar, Google Analytics, Disqus, email provider?
+    - GitHub, LinkedIn
+Repo License: Preferred license for published project code (MIT, Apache, none)?
+    - MIT
+
+Privacy, SEO & Legal
+Analytics Consent: Comfortable with analytics and tracking, or prefer privacy-first?
+    - Analytics and tracking of traffic is fine
+Contact Handling: How should contact messages be delivered (email, form service, GitHub issues)?
+    - Email
+Legal Requirements: Need cookie banner, privacy policy, or GDPR compliance?
+    - Yes, whatever is necessary to be compliant
+Copyrights: Any content owned by others that needs attribution or permission?
+    - No I don't believe so
+
+Performance, Security & Maintenance
+Performance Targets: Any goals for page load time or Core Web Vitals?
+    - No, just reduce friction for exploration
+Security Concerns: Any special security considerations for demos (CORS, API keys)?
+    - Nothing should leak, that's all
+Maintenance Plan: How often will you update content and who will maintain the site?
+    - I want to update it once a month, I will maintain it myself
+Backups & Rollback: Want automatic backups or versioned deploys?
+    - No, it is a simple personal website and Vercel can take care of rollbacks
+
+Logistics & Timeline
+Deadline: Do you have a launch date or milestone (career fair, application deadline)?
+    - Yes, finish in the next two weeks
+Budget: Any budget for paid hosting, design assets, or premium integrations?
+    - Only going to pay for the web hosting domain
+Preferred Deliverables: What would a successful first delivery look like (live site + source repo, mockups, README)?
+    - Fully-functioning live site with fully-fledged out readme, working links, and a easy to use method (possibly making a dashboard or API) to update information
+Access & Credentials: Will you provide GitHub access, domain DNS, and any API keys needed?
+    - Yes, as required or noted in the notes.md file
+
+Follow-Ups
+Which email should receive contact form messages?
+    - pranavgoyal0711@gmail.com
+Where is your headshot file (path) or upload it to the repo as headshot.jpg?
+    - C:\Code\Personal Website\professional_headshot.jpg
+    - Same as this repo, just uploaded it
+Do you want the contact form implemented with a Vercel serverless function or a no-code form service (Formspree, Netlify Forms, etc.)?
+    - Resend
+Preferred analytics provider (Google Analytics/GA4, Plausible, or other)? If GA, provide the Measurement ID later.
+    - GA seems the most straight-forward
+Exact launch deadline date (two-week target — which date)?
+    - 6/18/2026
+Confirm you want MIT license on the public repo (you answered yes).
+    - Yes
+Which project should be the highlighted hero project on the Home page?
+    - AI-Cars-in-Real-Cities
+Do you want me to propose a tech stack (I recommend Next.js + Tailwind + Vercel) or pick a simpler static site generator?
+    - I would like to use Next.js + shadcn/ui + Supabase + Vercel + Tailwind + Resend (emails)
