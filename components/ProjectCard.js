@@ -1,11 +1,26 @@
 export default function ProjectCard({ project, highlighted }) {
-  return (
-    <article className={`p-6 rounded-lg shadow ${highlighted ? 'border-2 border-accent' : 'border'} bg-white dark:bg-gray-900`}> 
-      <h3 className="text-xl font-bold">{project.title}</h3>
-      <p className="mt-2 text-sm text-gray-600">{project.blurb}</p>
-      <div className="mt-4">
-        <a className="text-accent hover:underline" href={project.repo} target="_blank" rel="noreferrer">View repository</a>
-      </div>
-    </article>
-  )
+	return (
+		<article className={`card ${highlighted ? 'card-accent' : ''}`}>
+			<div className='relative z-10'>
+				<div className='flex items-start justify-between gap-4'>
+					<div>
+						<div className='eyebrow'>Featured work</div>
+						<h3 className='mt-2 text-2xl font-semibold text-white'>{project.title}</h3>
+					</div>
+					<span className='chip'>Case study</span>
+				</div>
+				<p className='mt-4 max-w-2xl text-sm leading-7 text-[rgba(244,247,251,0.74)]'>{project.blurb}</p>
+				<div className='mt-5 flex items-center justify-between gap-3'>
+					<div className='flex flex-wrap gap-2'>
+						<span className='chip'>Problem</span>
+						<span className='chip'>Approach</span>
+						<span className='chip'>Tech</span>
+					</div>
+					<a className='btn-ghost' href={project.repo} target='_blank' rel='noreferrer'>
+						View repository
+					</a>
+				</div>
+			</div>
+		</article>
+	)
 }
