@@ -519,3 +519,240 @@ h1 span {
     transition: none !important;
   }
 }
+
+/* Minimal portfolio canvas */
+.graph-page {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #080808;
+}
+.graph-page .site-header {
+  height: 58px;
+  min-height: 58px;
+  padding: 0 28px;
+  border: 0;
+  background: transparent;
+  font-size: 12px;
+}
+.graph-page .brand {
+  font-size: 13px;
+  letter-spacing: -0.02em;
+}
+.graph-page .site-header nav {
+  gap: 22px;
+  color: #a7afb5;
+  font-size: 11px;
+}
+.graph-page .explorer-body {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+.graph-page .graph-view {
+  background-image: none;
+  background: #080808;
+}
+.graph-page .graph-container {
+  height: 100%;
+  min-height: 0;
+}
+.graph-page .graph-controls {
+  background: #080808;
+  border-color: #30363b;
+  left: 28px;
+  bottom: 12px;
+}
+.graph-page .portfolio-index {
+  height: 100%;
+  overflow: auto;
+  background: #0e1012;
+}
+.graph-page .index-items {
+  max-height: none;
+}
+.graph-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 26px 16px;
+  gap: 12px;
+}
+.graph-footer .category-controls {
+  border: 0;
+  padding: 0;
+  gap: 4px;
+}
+.graph-footer .category-controls button {
+  font-size: 10px;
+  padding: 6px 9px;
+}
+.graph-footer p {
+  font-size: 10px;
+  color: #8c979f;
+  white-space: nowrap;
+  margin: 0;
+}
+.preview-notice {
+  font-size: 12px;
+  padding: 10px 28px;
+  background: #1b2832;
+  color: #d5e4f0;
+}
+.preview-notice a {
+  text-decoration: underline;
+  margin-left: 10px;
+}
+.import-page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+.import-page nav {
+  font-size: 13px;
+  margin-bottom: 48px;
+}
+.import-page h1 {
+  font-size: 36px;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+}
+.import-page > p {
+  line-height: 1.8;
+  font-size: 14px;
+}
+.import-page h2 {
+  font-size: 22px;
+  margin-top: 36px;
+}
+.upload-section {
+  margin: 30px 0;
+  padding: 24px;
+  border: 1px solid #3b4650;
+  border-radius: 5px;
+}
+.upload-section label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.upload-section input {
+  max-width: 100%;
+  font-size: 13px;
+}
+.upload-section p {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.import-error {
+  color: #ffb7b7;
+}
+.import-warnings {
+  border: 1px solid #705e3b;
+  padding: 18px;
+  margin: 24px 0;
+  font-size: 13px;
+}
+.import-warnings li {
+  line-height: 1.7;
+  margin-top: 12px;
+}
+.review-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+.review-actions button,
+.review-actions a {
+  border: 1px solid #6b8192;
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-size: 13px;
+}
+.review-actions button:hover {
+  background: #293744;
+}
+.review-nodes > details {
+  padding: 18px 0;
+  border-bottom: 1px solid #303b43;
+}
+.review-nodes summary {
+  cursor: pointer;
+  font-size: 14px;
+}
+.review-nodes summary span {
+  display: block;
+  font-size: 12px;
+  margin: 8px 18px;
+}
+.review-fields {
+  padding: 16px 0;
+  display: grid;
+  gap: 16px;
+}
+.review-fields label {
+  font-size: 12px;
+  display: grid;
+  gap: 8px;
+}
+.review-fields input,
+.review-fields select,
+.review-fields textarea {
+  width: 100%;
+  background: #0b1014;
+  color: #eef1f3;
+  border: 1px solid #536473;
+  padding: 10px;
+  font: inherit;
+  border-radius: 3px;
+}
+.remove-node {
+  justify-self: start;
+  font-size: 12px;
+  color: #ffc3c3;
+  padding: 8px 0;
+}
+@media (max-width: 560px) {
+  .graph-page .site-header {
+    padding: 0 18px;
+  }
+  .graph-page .site-header nav {
+    gap: 12px;
+    font-size: 10px;
+  }
+  .graph-page .brand {
+    font-size: 12px;
+  }
+  .graph-page .graph-view {
+    display: block;
+  }
+  .graph-page .portfolio-index {
+    display: none;
+  }
+  .graph-page .show-index .graph-view {
+    display: none;
+  }
+  .graph-page .show-index .portfolio-index {
+    display: block;
+  }
+  .graph-footer {
+    padding: 6px 14px 12px;
+    display: block;
+  }
+  .graph-footer p {
+    display: none;
+  }
+  .graph-footer .category-controls {
+    gap: 0;
+  }
+  .graph-footer .category-controls button {
+    font-size: 9px;
+    padding: 6px;
+  }
+  .import-page h1 {
+    font-size: 30px;
+  }
+}
