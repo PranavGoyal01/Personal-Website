@@ -12,13 +12,7 @@ import {
   select,
 } from "d3";
 import type { Simulation, ZoomBehavior } from "d3";
-import {
-  GraphNode,
-  CATEGORY_COLORS,
-  nodes,
-  edges,
-  Category,
-} from "./data/nodes";
+import { GraphNode, CATEGORY_COLORS, Category } from "./data/nodes";
 import { NodeShape } from "./NodeShapes";
 interface SimNode extends GraphNode {
   x: number;
@@ -31,6 +25,8 @@ interface Link {
   target: SimNode;
 }
 interface Props {
+  nodes: GraphNode[];
+  edges: import("./data/nodes").GraphEdge[];
   onNodeClick: (node: GraphNode) => void;
   selectedId: string | null;
   category: Category | null;
@@ -42,7 +38,13 @@ const categories: Category[] = [
   "leadership",
   "education",
 ];
-export default function Graph({ onNodeClick, selectedId, category }: Props) {
+export default function Graph({
+  onNodeClick,
+  selectedId,
+  category,
+  nodes,
+  edges,
+}: Props) {
   const svg = useRef<SVGSVGElement>(null);
   const world = useRef<SVGGElement>(null);
   const sim = useRef<Simulation<SimNode, Link> | null>(null);
@@ -120,7 +122,7 @@ export default function Graph({ onNodeClick, selectedId, category }: Props) {
       simulation.stop();
       select(svgEl).on(".zoom", null);
     };
-  }, []);
+  }, [nodes, edges]);
   const finishDrag = useCallback(() => {
     if (!drag.current) return;
     const n = sim.current?.nodes().find((n) => n.id === drag.current?.id);
@@ -168,6 +170,8 @@ export default function Graph({ onNodeClick, selectedId, category }: Props) {
             })}
           </g>
           {points.map((n) => {
+            const displayLabel =
+              n.label.length > 34 ? n.label.slice(0, 31).trim() + "…" : n.label;
             const center = n.category === "center",
               branch = n.id.endsWith("-branch");
             const dim = category
@@ -239,6 +243,10 @@ export default function Graph({ onNodeClick, selectedId, category }: Props) {
                 onLostPointerCapture={finishDrag}
               >
                 <circle r={center ? 44 : 30} fill="transparent" />
+                <title>
+                  {n.label}
+                  {n.sublabel ? ` — ${n.sublabel}` : ""}
+                </title>
                 <NodeShape
                   category={n.category}
                   size={center ? 34 : branch ? 23 : 15}
@@ -263,7 +271,7 @@ export default function Graph({ onNodeClick, selectedId, category }: Props) {
                   fontSize={center ? 18 : branch ? 15 : 14}
                   fontWeight={center || branch ? 600 : 400}
                 >
-                  {n.label.length > 22
+                  {displayLabel.length > 22
                     ? n.label
                         .split(" ")
                         .reduce<string[]>((lines, word) => {
@@ -281,7 +289,7 @@ export default function Graph({ onNodeClick, selectedId, category }: Props) {
                             {line}
                           </tspan>
                         ))
-                    : n.label}
+                    : displayLabel}
                 </text>
               </g>
             );

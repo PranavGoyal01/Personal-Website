@@ -13,3 +13,9 @@ out/
 
 # TypeScript
 next-env.d.ts
+
+# Generated PDF parser worker
+public/pdf.worker.min.mjs
+
+# TypeScript incremental cache
+*.tsbuildinfo
